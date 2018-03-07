@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "test.h"
+#include "point.h"
 
 using namespace std;
 
@@ -20,8 +20,8 @@ int main(int argc, char *argv[])
     return 0;
 }
 
-#ifndef TEST_H
-#define TEST_H
+#ifndef POINT_H
+#define POINT_H
 
 class Point
 {
@@ -33,25 +33,25 @@ public:
     float getX();
     float getY();
 
-#endif // TEST_H
+#endif // POINT_H
 
-#include "test.h"
+#include "point.h"
 
-test::Point(float x, float y)
+Point::Point(float x, float y)
 {
     this->x = x;
     this->y = y;
 }
-test::Point(float x)
+Point::Point(float x)
 {
     this->x = x;
     y=0.0;
 }
-float test::getX()
+float Point::getX()
 {
     return x;
 }
-float test::getY()
+float Point::getY()
 {
     return y;
 }
