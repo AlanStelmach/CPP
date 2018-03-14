@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+class klasaTestowa
+{
+public:
+    int test;
+};
+
+int main(int argc, char *argv[])
+{
+    klasaTestowa t=klasaTestowa();
+    t.test=5;
+
+    return 0;
+}
