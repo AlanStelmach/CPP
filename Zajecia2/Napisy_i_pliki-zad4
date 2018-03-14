@@ -1,0 +1,21 @@
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    string wiersz;
+    cin>>wiersz;
+    
+    ifstream plik2;
+    plik2.open("C:\Użytkownicy\student\Random_Stuff");
+    while(getline(plik2, wiersz))
+        cout<<wiersz<<endl;
+    plik2.close();
+    
+    return 0;
+}
