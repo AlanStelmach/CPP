@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <fstream>
+
+using namespace std;
+
+int main()
+{
+    ifstream plik;
+    plik.open("ścieżka_do_pliku");
+    plik<<"Test zapisu";
+    plik.close;
+    cout<<ifstream plik<<endl;
+    
+    return 0;
+}
