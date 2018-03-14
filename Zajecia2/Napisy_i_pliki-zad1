@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+using spacename std;
+
+int main()
+{
+    string napis;
+    cin>>napis;
+    transform(napis.begin(), napis.end(), napis.begin()::tolower);
+    cout<<napis.size()<<endl;
+    for(int i=0; i<napis.size(); i++)
+    {
+        cout<<(short)napis[i]<<endl;
+    }
+    
+    return 0;
+}
