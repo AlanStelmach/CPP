@@ -9,6 +9,8 @@ int main()
     string n2="World";
     string n3="!!!";
     n4=n1+n2+n3;
+    //n2.clear();
+    //n2.c_str; - typ znakowy z C
     cout<<n4<<endl;
     //cout<<n4.size()<<endl;
     
