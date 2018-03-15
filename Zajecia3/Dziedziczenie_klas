@@ -32,3 +32,17 @@ int main()
     
     return 0;
 }
+
+/* public:
+        public -> public
+        protected -> protected
+        private -> nie dostępne  
+   private:
+        public -> private
+        protected -> private
+        private -> private
+   protected:
+        public -> protected
+        protected -> protected
+        private -> nie dostępne
+*/
