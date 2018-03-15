@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+
+class ssak
+{
+public:
+    ssak() {
+    }
+    void jedz()
+    {
+        cout<<"jem"<<endl;    
+    };
+};
+
+class pies : public ssak
+{
+public:
+    pies() {
+    }
+    void szczekaj()
+    {
+      cout<<"szczekam"<<endl;  
+    };
+};
+
+int main()
+{
+    pies.p=pies();
+    p.szczekaj();
+    p.jedz();
+    
+    return 0;
+}
