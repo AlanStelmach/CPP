@@ -5,23 +5,25 @@ using namespace std;
 class ssak
 {
 public:
-    ssak() {
+    ssak() 
+    {
     }
     void jedz()
     {
         cout<<"jem"<<endl;    
-    };
+    }
 };
 
 class pies : public ssak
 {
 public:
-    pies() {
+    pies() 
+    {
     }
     void szczekaj()
     {
       cout<<"szczekam"<<endl;  
-    };
+    }
 };
 
 int main()
