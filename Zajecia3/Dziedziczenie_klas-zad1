@@ -12,7 +12,7 @@ public:
     {
         this->login=login;
         this->password=password;
-    };
+    }
     bool authorize(string login, string password)
     {
         if(this->login==login && this->password==password)
