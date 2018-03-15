@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+class Aa
+{
+private:  //protected
+    int x;
+public:
+    int y;
+    Aa() 
+    {
+        x=1;
+        y=2;
+    }
+};
+
+class B : public Aa  //protected Aa  //private Aa
+{
+public:
+    B : public A() {}
+    void test()
+    {
+        cout<<y<<endl;
+    }
+};
+
+int main()
+{   
+    B b=B();
+    b.test();
+    return 0;
+}
