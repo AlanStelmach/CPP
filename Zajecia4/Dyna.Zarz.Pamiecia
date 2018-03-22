@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+void funkcja(double *wskaznik)
+{
+    *wskaznik=7;
+}
+
+int main()
+{
+    double *liczba;
+    liczba=new double;
+    *liczba=5;
+    cout<<liczba<<" "<<*liczba<<endl;
+    funkcja(liczba);
+    cout<<liczba<<" "<<*liczba<<endl;
+    delete liczba;
+    cout<<liczba<<" "<<*liczba<<endl;
+
+    return 0;
+}
