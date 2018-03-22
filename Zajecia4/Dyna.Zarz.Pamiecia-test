@@ -14,7 +14,7 @@ public:
         this->imie=new string;
         *this->imie=imie;
         this->wiek=wiek;
-        this maxwiek=maxwiek;
+        this->maxwiek=maxwiek;
         this->plec=plec;
     }
     
