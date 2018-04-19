@@ -18,7 +18,7 @@ public:
     }
 };
 
-class Teacher
+class Teacher //: public Person - Wymagana modyfikacja kodu
 {
 private:
     string title;
