@@ -1,0 +1,25 @@
+#include <iostream>
+#include <list>
+#include <vector>
+#include <set>
+#include <map>
+
+using namespace std;
+
+int main()
+{
+    map <int, string> dane;
+    dane[1]="test";
+    dane[15]="xyz";
+    dane[6]="asd";
+    dane["k1"]="xyz";
+    cout<<dane[1]<<endl;
+    cout<<dane["k1"]<<endl;
+    map <string, string>::iterator it;
+    it=dane.find("k1");
+    if(it == dane.end())
+        cout<<"Nie zanleziono"<<endl;
+    else
+        cout<<"Istnieje"<<endl;
+    return 0;
+}
