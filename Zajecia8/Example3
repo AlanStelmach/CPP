@@ -1,0 +1,21 @@
+#include <iostream>
+#include <list>
+#include <vector>
+#include <set>
+
+using namespace std;
+
+int main()
+{
+    set <string> dana;
+    dana.insert("TestA");
+    dana.insert("TestB");
+    dana.insert("TestB");
+    set<string>::iterator result;
+    result=dana.find("TestA");
+    if(result == dana.end())
+        cout<<"Nie istnieje"<<endl;
+    else
+        cout<<"Istnieje"<<endl;
+    return 0;
+}
