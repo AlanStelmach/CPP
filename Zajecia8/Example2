@@ -1,0 +1,14 @@
+#include <iostream>
+#include <list>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    vector <int> daneV;
+    list <int> daneL;
+    daneV.push_back();
+    daneL.push_front();
+    return 0;
+}
