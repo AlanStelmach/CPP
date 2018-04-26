@@ -1,0 +1,17 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+    vector <int> dane;
+    dane.push_back(5);
+    dane.push_back(6);
+    cout<<dane[0]<<" "<<dane[1]<<endl;
+    cout<<dane.size()<<endl;
+    dane.pop_back();
+    cout<<dane[0]<<" "<<dane[1]<<endl;
+    cout<<dane.size()<<endl;
+    return 0;
+}
