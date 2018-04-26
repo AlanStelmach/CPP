@@ -1,0 +1,59 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int mn(int a, int b);
+int dod(int a, int b);
+
+void weryf(int a, int b, int(*wskNaFunk)(int, int))
+{
+    if(wskNaFunk(a, b)==0)
+        cout<<"ZERO"<<endl;
+    else
+        cout<<"!zero"<<endl;
+}
+
+class Point
+{
+public:
+    float x,y;
+    Point(float x, float y)
+    {
+        this->x=x;
+        this->y=y;
+        cout<<this->x<<" "<<this->y<<endl;
+    }
+};
+bool cmp(Point *p1, Point *p2)
+{
+    return p1->x < p2->x;
+}
+
+int main()
+{
+    /*vector<Point*> vect;
+    vect.push_back(new Point(1.1, 2.0));
+    vect.push_back(new Point(2.3, 2.2));
+    vect.push_back(new Point(0.6, 8.2));
+    for(int i=0; i<vect.size(); i++)
+        cout<<vect[i]->x<<" "<<vect[i]->y<<endl;
+    cout<<"---------"<<endl;
+    
+    sort(vect.begin(), vect.end(), cmp);
+    for(int i=0; i<vect.size(); i++)
+        cout<<vect[i]->x<<" "<<vect[i]->y<<endl;*/
+    
+    weryf(5, -5, mn);
+    
+    return 0;
+}
+
+int mn(int a, int b)
+{
+    return a*b;
+}
+int dod(int a, int b)
+{
+    return a+b;
+}
