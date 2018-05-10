@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+class Cliczba
+{
+private:
+    int liczba;
+public:
+    Cliczba(int liczba)
+    {
+        this->liczba=liczba;
+    }
+
+    void steLiczba(int liczba)
+    {
+        this->liczba=liczba;
+    }
+
+    int getliczba()
+    {
+        return liczba;
+    }
+
+    int operator +(Cliczba &other)
+    {
+        return liczba+other.liczba;
+    }
+};
+
+int main(int argc, char *argv[])
+{
+    Cliczba l1(5);
+    Cliczba l2(2);
+    cout<<"Suma "<<l1+l2<<endl;
+    return 0;
+}
