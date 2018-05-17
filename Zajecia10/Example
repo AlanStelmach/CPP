@@ -3,7 +3,7 @@
 using namespace std;
 
 template <class Typ>
-Typ pomoz(Typ l1, Typ l2)
+Typ pomnoz(Typ l1, Typ l2)
 {
     return l1*l2;
 }
@@ -11,7 +11,7 @@ Typ pomoz(Typ l1, Typ l2)
 int main()
 {
     double a=5, b=6;
-    cout<<pomoz<double>(a,b)<<endl;
+    cout<<pomnoz<double>(a,b)<<endl;
     
     return 0;
 }
