@@ -1,0 +1,19 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+template <class Typ>
+Typ funkcja(Typ *first, Typ *last)
+{
+    sort(first, last);
+    int *zmienna=first;
+    return *zmienna;
+}
+
+int main()
+{
+    int tab1[5]={10,2,3,4,5};
+    cout<<funkcja<int>(&tab1[0],&tab1[4])<<endl;
+
+    return 0;
+}
