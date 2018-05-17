@@ -1,0 +1,29 @@
+#include <iostream>
+#include <algorithm>
+#include <string>
+using namespace std;
+
+template <class Typ>
+Typ funkcja(Typ *first, Typ *last)
+{
+    sort(first, last);
+    int *zmienna=first;
+    return *zmienna;
+}
+template <class Type>
+Type fun1(Type *start, Type *end)
+{
+    sort(start, end);
+    string *napis=start;
+    return *napis;
+}
+
+int main()
+{
+    int tab1[5]={10,2,3,4,5};
+    string tab2[10]={'abc','bca','ABC','Abc','def','a','aaa','yyy','arc','rsixs'};
+    cout<<funkcja<int>(&tab1[0], &tab1[4])<<endl;
+    cout<<fun1<string>(&tab2[0], &tab2[10])<<endl;
+
+    return 0;
+}
