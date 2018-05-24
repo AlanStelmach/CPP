@@ -1,0 +1,62 @@
+#include <iostream>
+
+template <typename T>
+class CustomerInterator{
+    T *element;
+public:
+    CustomerInterator(T *element)
+    {
+        this->element=element;
+    }
+    CustomerInterator& operator++()
+    {
+        
+    }
+};
+
+#ifndef ARRAY_H
+#define ARRAY_H
+
+template <typename T>
+class Array {
+    unsigned int m_size;
+    T *arr;
+public:
+    Array(int size);
+    ~Array();
+    int size();
+    T& operator[](int index);
+};
+
+template <typename T>
+Array<T>::Array(int size) {
+    this->m_size=size;
+    this->arr=new T[size];
+}
+
+template <typename T>
+Array<T>::~Array() {
+    delete [] arr;
+}
+
+template <typename T>
+int Array<T>::size() {
+    return m_size;
+}
+
+template <typename T>
+T& Array<T>::operator[](int index) {
+    return arr[index];
+}
+
+
+#endif // ARRAY_H
+
+using namespace std;
+
+int main()
+{
+    Array<int> a(15);
+    CustomerInterator<Array<int>>it(&a);
+    return 0;
+}
