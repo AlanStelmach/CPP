@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+
+class Klasa
+{
+private:
+  int mojaZmienna;
+public:
+  friend class ZaprzyjaznionaKlasa;
+
+  Klasa(int mojaZmienna)
+  {
+    this->mojaZmienna=mojaZmienna;
+  }
+  void showData()
+  {
+    cout<<this->mojaZmienna<<endl;
+  }
+  friend void ZaprzyjaznionaFunkcja(Klasa & k)
+  {
+
+  }
+};
+
+class ZaprzyjaznionaKlasa
+{
+public:
+  void modify(Klasa & k)
+  {
+    k.mojaZmienna=0;
+  }
+  void ZaprzyjaznionaFunkcja(Klasa & k)
+  {
+    k.mojaZmienna=11;
+  }
+};
+
+int main()
+{
+  Klasa k(5);
+  ZaprzyjaznionaKlasa zk;
+  k.showData();
+  zk.modify(k);
+  k.showData();
+  ZaprzyjaznionaFunkcja(k);
+  k.showData();
+
+  return 0;
+}
