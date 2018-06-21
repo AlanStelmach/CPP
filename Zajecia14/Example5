@@ -1,0 +1,51 @@
+#include <iostream>
+#include <memory>
+
+using namespace std;
+
+class Klasa
+{
+private:
+    static int nextId;
+    int id;
+public:
+    Klasa() : id(++nextId)
+    {
+        cout<<"Nowy obiekt o id "<<id<<endl;
+    }
+    ~Klasa()
+    {
+        cout<<"Destruktor obiektu o id "<<endl;
+    }
+    int Test(int arg)
+    {
+        cout<<"Funkcja testowa obiektu o id "<<id<<endl;
+        return arg+4;
+    }
+    int getId()
+    {
+        return id;
+    }
+};
+
+int Klasa::nextId=0;
+
+class KlasaUsuwajaca
+{
+public:
+    void operator()(Klasa *wsk)
+    {
+        cout<<"Czyszczenie obiektu o id "<<wsk->getId()<<endl;
+        delete wsk;
+    }
+};
+
+
+int main(int argc, char *argv[])
+{
+    unique_ptr<Klasa, KlasaUsuwajaca>ptr(new Klasa);
+    cout<<ptr->Test(5)<<endl;
+    cout<<"Koniec"<<endl;
+    
+    return 0;
+}
