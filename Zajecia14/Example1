@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+class Klasa
+{
+private:
+    static int nextId;
+    int id;
+public:
+    Klasa() : id(++nextId)
+    {
+        cout<<"Nowy obiekt o id "<<id<<endl;
+    }
+    ~Klasa()
+    {
+        cout<<"Destruktor obiektu o id "<<endl;
+    }
+    int Test(int arg)
+    {
+        cout<<"Funkcja testowa obiektu o id "<<id<<endl;
+        return arg+4;
+    }
+    int getId()
+    {
+        return id;
+    }
+};
+
+int Klasa::nextId=0;
+
+int main(int argc, char *argv[])
+{
+    Klasa *t1=new Klasa();
+    cout<<t1->Test(2)<<endl;
+    delete t1;
+    return 0;
+}
