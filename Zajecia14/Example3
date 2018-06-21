@@ -1,0 +1,41 @@
+#include <iostream>
+#include <memory>
+
+using namespace std;
+
+class Klasa
+{
+private:
+    static int nextId;
+    int id;
+public:
+    Klasa() : id(++nextId)
+    {
+        cout<<"Nowy obiekt o id "<<id<<endl;
+    }
+    ~Klasa()
+    {
+        cout<<"Destruktor obiektu o id "<<endl;
+    }
+    int Test(int arg)
+    {
+        cout<<"Funkcja testowa obiektu o id "<<id<<endl;
+        return arg+4;
+    }
+    int getId()
+    {
+        return id;
+    }
+};
+
+int Klasa::nextId=0;
+
+int main(int argc, char *argv[])
+{
+    unique_ptr<Klasa>ptr1(new Klasa);
+    cout<<ptr1->Test(3)<<endl;
+    cout<<(*ptr1).Test(8)<<endl;
+    ptr1.reset(new Klasa);
+    cout<<"Koniec"<<endl;
+    return 0;
+}
